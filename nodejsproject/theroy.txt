@@ -1,0 +1,13 @@
+js?
+its a programming langugae
+its light weight and dynamic programming langugae
+with js we can update and modify the css and html
+with js we can chnage , manulpte and update the data
+it can work both server side and clinet side and it is text baesd programming langugae.
+
+js advantages
+less sevrer interactions
+immediate feedback to user
+increased interactivity
+richer interface
+

@@ -1,0 +1,85 @@
+
+
+tsr = "Divya always Worried about her happiness"
+
+function longeststr(tsr) {
+    let lon = tsr.split(",")
+  console.log("longest",lon.sort(a,b) =>{b.length-a.length})
+}
+
+longeststr(tsr)
+array.filter
+array.reduce
+array.map
+
+map()
+reduce()
+filter()
+splice()
+slice()
+sort()
+
+array = [1,2,3,4,5]
+
+splice.array2
+
+
+number
+string
+array
+
+web pack:
+Module Bundling :allowing you to organize your code into separate modules. 
+code Splitting : it will split the code into chunks and allow which code do you need to run
+Assest management :  Webpack can handle various types of assets, including JavaScript, CSS, images, fonts, and more. I
+Hot Module Replacement (HMR) :withour resfresh you can see chnages in browser
+
+
+
+
+<head>
+  <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="mystyle.css">
+</head>
+<body>
+  <div>
+    <h1>External CSS Example</h1>
+    <p>In the external stylesheet, the div is styled to have a background color, text color, border, and padding.</p>
+  </div>
+</body>
+
+position relative
+if you are giving to an element postion is relative without giving any attribute nothing will happen, if you 
+top 20px and left 20px along with postion relative then the element moves left and top 20 px from original position.
+
+position absloute
+if you are giving position relative to parent and postion absloute to child and if nothing giving any other 
+attribute in child nothing will happen if you are giving any top 20 px in child the child element will moves
+20px top from parenet original postion
+
+semantic
+header, article,body,text and footer these are called semantic elements
+
+non semantic elements
+div span
+
+block scope elements
+always start on new line, browsers gives some space before and after the element and it will take full width of screen 
+example: div, p, ol, il, article,form nd footer
+
+inline elements
+doestn't start on new line , only takes space as much as they need 
+example span you can give span insode p tag also 
+example <a> <textarea> <select>
+
+type of Nan is number.
+The JSON.stringify() function is used to convert a JSON object into string format.
+
+Object Serialization is the process in which an object or data structure is translated into a format suitable for transferral over a network, 
+or storage
+
+The in keyword is used to check whether the given property is valid or not in Javascript.
+
+The parseInt() method converts a string to an integer if it is possible. If the string starts with a number, 
+it will convert that numeric part and return it. Else, it will return NaN.
+
+The eval() function evaluates the expression passed into it as a parameter and returns the result after evaluation.

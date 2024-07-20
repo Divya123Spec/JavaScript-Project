@@ -1,0 +1,121 @@
+useEffect( () =>{
+// this will run on every render
+},)
+
+useEffect ( () =>{
+// this will run only once , for the first render
+},[])
+
+useEffect (()=>{
+// This effect will run on every render, but only if one of the dependencies has changed
+},[arraydependencyvalue])
+
+useEffect( () =>{
+retrun (function)
+},[])
+
+when component mounts
+on every components render
+on every component render with a condtion
+when component unmount
+
+
+when component mounts
+it will call when to fetchdata or to listen any events,To run the function once, add an empty dependency list
+useEffect( () =>{
+ //callmeonce
+},[])
+
+on every component render
+it will run everytime when component runs if you are adding no dependency array
+useEffect( () =>{
+
+})
+
+on every component render with a condtion
+To call a function conditionally, specify the list of dependencies.
+And the rule of thumb is to always add those dependencies that you are using inside the useEffect().
+
+useEffect( () =>{
+},dep1,dep2)
+
+when component unmount
+To clean up (remove event listeners or stop data fetching with a side effect) after the component unmounts,
+ a return statement with a function should be added inside the useEffect() hook.
+ useEffect ( () =>{
+    document.addEventlistener()
+    retrun () =>{
+        document.addEventlistener()
+    }
+ })
+
+REDUX
+A place to store data
+A place to get data 
+A place to change data
+
+1. Store is the place we save the data
+import {createStore} from "redux"
+import {reducer} from "./reduxModule"
+
+const store = createStore(reducer)
+return (
+  <Provider store={store}>
+    <Container />
+  </Provider>
+)
+
+2. getState is the method to get state 
+const state = store.getState(),
+
+3.action and reducer is the method to change the state
+const INCREMENT = "redux/increment";
+const initialState = {
+  counter: 0,
+};
+
+export const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case INCREMENT:
+      return {
+        counter: state.counter + action.amount
+      };
+    default:
+      return state;
+  }
+};
+
+export const incrementAction = (amount = 1) => {
+  return {
+    type: INCREMENT,
+    amount,
+  };
+};
+import { connect } from "react-redux";
+import { incrementAction } from "./reduxModule";
+
+const mapStateToProps = state => ({ counter: state.counter });
+const mapDispatchToProps = { incrementAction };
+export default connect(mapStateToProps, mapDispatchToProps)(Comp);
+import React from "react";
+
+export default function Comp({ counter, incrementAction }) {
+  function handleIncreaseOne() {
+    incrementAction(1);
+  }
+  function handleIncreaseTen() {
+    incrementAction(10);
+  }
+  return (
+    <div>
+      <span>{counter}</span>
+      <div>
+        <button onClick={handleIncreaseOne}>+1</button>
+        <button onClick={handleIncreaseTen}>+10</button>
+      </div>
+    </div>
+  );
+}
+
+HOC - higer oder component
+const Enhancecomponent  = higerOrdercomponent(originalComponent)

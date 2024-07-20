@@ -1,0 +1,6 @@
+aspect-ration : 3/2 
+all the items will come into same height
+object-fit :Contain
+all should be fit in height and width without strcth
+mix-blend-mode :color-burn
+all icons will come on same background color

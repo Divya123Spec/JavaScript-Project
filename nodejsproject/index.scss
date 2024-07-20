@@ -1,0 +1,14 @@
+p::before {
+    content: "Read this -";
+    background-color: yellow;
+    color: red;
+    font-weight: bold;
+  }
+
+
+  .input-box{
+    display: flex;
+    flex-direction: row;
+ 
+    width:auto;
+  }
