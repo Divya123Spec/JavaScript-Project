@@ -2,7 +2,7 @@
   "name": "nodejsproject",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js, example.js app.js codingQuestions.js practice.js",
+  "main": "index.js, example.js app.js codingQuestions.js practice.js javascript1.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
