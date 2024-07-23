@@ -1,0 +1,10 @@
+1.write a function that returns reverse of string?
+2.write afunction that retruns the lognest word in sentnces
+3.given string is plindrome or not?
+4.remove duplicates elements from array?
+5.check two strings are anagrams or not?
+6.number of vowels in a string?
+7.to find the largest number of array?
+8.given number is prime or not?
+9.calculate the factorial of a nmuber?
+10.remove all white spaces characters from a string.

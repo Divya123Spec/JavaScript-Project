@@ -38,3 +38,100 @@
 38. Describe the differences between 'REST' and 'SOAP' APIs.
 39. What is the purpose of the 'querySelectorAll' method in JavaScript?
 40. Explain the concept of the 'Strict Mode' in JavaScript.
+50.what is Javascript?
+51.Explain primitive and non primitive data types?
+52.explain callbacks and promises?
+53.Explain higer order functions?
+54.what is prototypal inheritance?
+55.ES6 features?
+56.this keyword in Javascript?
+57.Compare and contrast setTimeout and setInterval.?
+58.Explain the concept of event delegation.?
+59.What are generators and iterators in JavaScript?
+60.How does JavaScript handle memory management?
+61.Explain the module pattern in JavaScript.
+62.What are Web Workers in JavaScript?
+63.What is the difference between Java & JavaScript?
+64.features of Javascript and avdantages?
+65.How can you create an object in JavaScript?
+66.Define anonymous function.?
+67. How can you create an Array in JavaScript?
+68.What is a name function in JavaScript & how to define it?
+69. Name some of the built-in methods and the values returned by them.
+70. How does Type Of Operator work?
+71.How to create a cookie using JavaScript?
+72. How to read a cookie using JavaScript?
+73.How to delete a cookie using JavaScript?
+74.What is the difference between exec () and test () methods in javascript?
+75.Why do we use the word “debugger” in javascript?
+76. Explain Implicit Type Coercion in javascript.
+77. What is the difference between Attributes and Property?
+78.List out the different ways an HTML element can be accessed in a JavaScript code.
+79. In how many ways a JavaScript code can be involved in an HTML file?
+80. What are the ways to define a variable in JavaScript?
+81.What is a Typed language?
+82.What is the difference between Local storage & Session storage?
+83. What is the difference between undeclared & undefined?
+84. Name some of the JavaScript Frameworks
+85.What is the difference between window & document in JavaScript?
+86.What is the difference between innerHTML & innerText?
+87.What is NaN in JavaScript?
+88.How do JavaScript primitive/object types passed in functions?
+89.How can you convert the string of any base to integer in JavaScript?
+90.What would be the result of 2+5+”3″?
+91.What are Exports & Imports?
+92.What is a prompt box in JavaScript?
+93.How to empty an Array in JavaScript?
+94.What do you mean by Self Invoking Functions?
+95.What are escape characters in JavaScript?
+96.What are undeclared and undefined variables?
+97. What are global variables? How are these variables declared, and what are the problems associated with them?
+98. What is the difference between ViewState and SessionState?
+99.How to submit a form using JavaScript?
+100. Does JavaScript support automatic type conversion? 
+101.What are all the looping structures in JavaScript ?
+102.How can the style/class of an element be changed?
+103. Explain how to read and write a file using JavaScript?
+104.What is called Variable typing in JavaScript ?
+105.Explain how to detect the operating system on the client machine?
+106.What are the types of Pop up boxes available in JavaScript?
+107.What is the difference between an alert box and a confirmation box?
+108.What is the disadvantage of using innerHTML in JavaScript?
+109.What is the use of void(0) ?
+110.How to target a particular frame from a hyperlink in JavaScript ?
+111.Write the errors shown in JavaScript?
+112.How many ways an HTML element can be accessed in JavaScript code?
+113.Describe all Array Methods?(Map,Filter,Find,Every,Reduce,forEach,Sort,newSet,flatMap)
+114.String methods?(shift(),pop(),unshift(),push(),filter(),sort(),reverse(),isArray(),Splice()slice(),)
+115.Is JavaScript a dynamically typed or statically typed language?
+116.What are classes in Javascript?
+117.Explain rest parameter and spread operator.
+118.What is object destructuring?
+119.Explain temporal dead zone.?
+120.What is WeakMap in JavaScript?
+121.What are the rules for naming a variable in JavaScript?
+122.Explain the purpose of the pop() method.
+123.What are break and continue statements?
+124.Async and await
+125.Object.create and Object.assign
+126.IIFE, Modules and Namespaces
+127.Function Scope, Block Scope and Lexical Scope
+128.what is json, conerting from strings to object and then vice verse?
+129.unary, binaray and ternaory?
+130.short circuit evlaution and evl()?
+131.what is pure and impure functions in js?
+132.what is string immuatablity?
+133.how to you select ,modify,or remove DOM elemets?
+134.error handling in js and best practices?
+135.Dot notation vs Bracket notation.
+136.how to itrarte through objects?
+137.how to check objects if a property exists or not?
+138.how to clone object?
+139.Eveny delegation in js?
+140.even.preventDefulat()?
+141.how to remove an event handler from an element in js?
+142.what is recurrsion?
+143.context API?
+144.what is object.freeze and object.seal.?
+145.How can you optimize JavaScript code for performance?
+
