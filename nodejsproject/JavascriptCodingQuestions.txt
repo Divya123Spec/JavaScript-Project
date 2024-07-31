@@ -8,3 +8,7 @@
 8.given number is prime or not?
 9.calculate the factorial of a nmuber?
 10.remove all white spaces characters from a string.
+11.Write a simple function (less than 160 characters) that returns a boolean indicating whether or not a string is a palindrome.
+12.Write a sum method which will work properly when invoked using either syntax below.
+13.
+
