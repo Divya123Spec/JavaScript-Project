@@ -134,3 +134,6 @@ context API?
 what is object.freeze and object.seal.?
 How can you optimize JavaScript code for performance?
 
+// functions examples pending
+string examples
+Dom example
