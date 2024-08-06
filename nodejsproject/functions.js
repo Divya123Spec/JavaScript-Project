@@ -249,3 +249,88 @@ greet.apply(person, ["hello"]); // Hello Happy , here we are passing arguments a
 // example
 const greetPerson = greet.bind(person);
 greetPerson("greeting"); // Hello Happy here we are binding person object to greet function.
+
+// examples
+const obj = {
+  value: 100,
+  getValue: function () {
+    console / log(this.value); // 100 here this is pointing to obj
+    return this.value;
+  },
+};
+const getValue1 = obj.getValue;
+console.log(getValue()); // undefined beacuse this is not pointing to obj
+
+const obj1 = {
+  value: 100,
+  getValue: function () {
+    return this.value;
+  },
+};
+const getValue = obj1.getValue.bind(obj);
+console.log(getValue()); // 100 here this is pointing to obj beacuse we are binding obj to getValue function.
+
+function multiply(a) {
+  return function (b) {
+    return a * b;
+  };
+}
+const multiplyBy2 = multiply(2);
+console.log(multiplyBy2(3)); //6 here we are passing 3 as argument to multiplyBy2 function which is returned by multiply function.
+
+(function () {
+  let a = 10;
+  console.log(a); // 10 here we are using IIFE to avoid polluting the global scope.
+})();
+
+function makeCounter() {
+  let count = 0;
+  return function () {
+    count++;
+    return count;
+  };
+}
+const counter1 = makeCounter();
+console.log(counter1()); // 1
+console.log(counter1()); // 2
+console.log(counter1()); // 3 here we are using closure to maintain the state of the application.
+
+function multiplyBy(factor) {
+  return function (number) {
+    return number * factor;
+  };
+}
+const multiplyBy3 = multiplyBy(3);
+console.log(multiplyBy3(5)); // 15 here we are using closure to maintain the state of the application.
+
+function greet() {
+  setTimeout(function () {
+    console.log(this.name);
+  }, 500);
+}
+greet.call({ name: "Daniel Craig" }); // udefined, here call method is not working beacuse this is not pointing to object.
+
+function Employee(name) {
+  this.name = name;
+}
+Employee.prototype.getName = () => {
+  // here arrow function is not working beacuse this is not pointing to object.
+  return this.name;
+};
+const jason = new Employee("Jason");
+console.log(jason.getName()); // undefined here arrow function is not working beacuse this is not pointing to object.
+
+var something = null;
+var randomFunction = function () {
+  var somethingElse = something;
+  var unused = function () {
+    if (somethingElse) console.log("hi");
+  };
+  something = {
+    longStr: new Array(1000000).join("*"),
+    someMethod: function () {
+      console.log(someMessage);
+    },
+  };
+};
+setInterval(randomFunction, 1000);
