@@ -262,3 +262,46 @@ console.log(personDetails); // {age:24}
 //1. Map Object is collection of key value pairs, but Set Object is collection of unique values.
 //2. Map Object allows any data type as key, but Set Object allows only one data type.
 //3. Map Object has size property, but Set Object has size property.
+
+// comapre two objects
+// To Compare two objects in js,you need to check if the objects have same properties and values.
+// there are 2 different levels of  comparison, shallow comparison and deep comparison.
+
+// shallow comparison
+// Shallow equality checks if two objects reference the same location in memory:
+const obj10 = { a: 1, b: 2 };
+const obj11 = { a: 1, b: 2 };
+const obj12 = obj10;
+console.log(obj10 === obj11); // false // here obj10 and obj11 are different objects, so it is false.
+console.log(obj10 === obj12); // true // here obj12 is pointing to obj10, so it is true.
+console.log(JSON.stringify(obj10) === JSON.stringify(obj11)); // true
+
+// deep comparison
+// Deep equality checks if two objects have the same properties and values:
+const obj13 = { a: 1, b: 2, c: { d: 3 } };
+const obj14 = { a: 1, b: 2, c: { d: 3 } };
+const obj15 = { a: 1, b: 2, c: { d: 4 } };
+function deepEqual(obj1, obj2) {
+  if (obj13 === obj14) return true; // if both objects are same, return true
+
+  if (typeof obj13 !== "object" || typeof obj14 !== "object") return false; // if both objects are not objects, return false
+
+  const keys1 = Object.keys(obj13);
+  const keys2 = Object.keys(obj14);
+
+  if (keys1.length !== keys2.length) return false; // if both objects keys length is not same, return false
+
+  for (let key of keys1) {
+    if (!keys2.includes(key) || !deepEqual(obj13[key], obj14[key]))
+      return false; // if both objects keys are not same or values are not same, return false
+  }
+  return true; // if both objects keys and values are same, return true
+}
+
+console.log(deepEqual(obj13, obj14)); // true
+console.log(deepEqual(obj13, obj15)); // false
+
+// Using lodash library
+const _ = require("lodash");
+console.log(_.isEqual(obj13, obj14)); // true
+console.log(_.isEqual(obj13, obj15)); // false
