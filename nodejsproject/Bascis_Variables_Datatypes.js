@@ -132,6 +132,8 @@ const person = {
 // const should be initialized at the time of declaration.
 // let,const are not hoisted.
 
+
+
 // var creates a function scoped variable.
 function example() {
   if (true) {
@@ -219,3 +221,19 @@ console.log(string + number); //1020, here number is converted to string and the
 console.log(number + boolean); //21, here boolean is converted to number and then added.
 console.log(string * number); //200, here string is converted to number and then multiplied.
 console.log(boolean + nullVariabl); //1, here null is converted to 0 and then added.
+console.log(3-"3") //
+//  when you - both operands will convert into numbers
+// when you  + both opernads will convert into strings
+
+// when you create a array or object with const , can you modify that?
+//  yes, you cannot reassign the const but you can modify
+const numbers = [1, 2, 3, 4, 5];
+
+numbers[0] = 10; // Modify an element in the array
+numbers.push(6); // Add a new element to the array
+
+console.log(numbers); // Output: [10, 2, 3, 4, 5, 6]
+
+numbers = [7, 8, 9]; // TypeError: Assignment to constant variable
+
+

@@ -287,3 +287,9 @@ let x3 = true;
 let y3 = false;
 let z2 = x3 + y3 && x3 * y3;
 console.log(z2); //0
+
+
+// how to get second last element from an array
+let arr = [10, 20, 30, 40, 50];
+let secondLast = arr[arr.length - 2];
+console.log(secondLast); // 
