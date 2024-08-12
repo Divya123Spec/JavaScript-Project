@@ -219,3 +219,21 @@ console.log(string + number); //1020, here number is converted to string and the
 console.log(number + boolean); //21, here boolean is converted to number and then added.
 console.log(string * number); //200, here string is converted to number and then multiplied.
 console.log(boolean + nullVariabl); //1, here null is converted to 0 and then added.
+
+// what is webpack? and it use in react
+// Webpack is a module bundler that takes the modules with dependencies and
+// generates static assets representing those modules.
+// Webpack is a static module bundler for modern JavaScript applications.
+// Webpack is used to bundle all the javascript files into a single file.
+// Webpack is used to bundle all the css files into a single file.
+// Webpack is used to bundle all the images into a single file.
+// Webpack is used to bundle all the fonts into a single file.
+// Webpack is used to bundle all the html files into a single file.
+// Webpack is used to bundle all the json files into a single file.
+
+// what are key features of webpack
+// Webpack is a static module bundler for modern JavaScript applications.
+// code splitting: Webpack allows you to split your code into multiple bundles which can then be loaded on demand or in parallel.
+// Loaders: Webpack enables you to preprocess files as you import or “load” them.
+// Plugins: Webpack has a rich plugin interface. Most of the features within Webpack itself use this plugin interface.
+// dev server: Webpack comes with a built-in development server which can be used to  live reloading your web app.

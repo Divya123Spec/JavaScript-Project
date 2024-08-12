@@ -184,3 +184,62 @@ const interval = setInterval(() => {
     clearInterval(interval);
   }
 }, 1000);
+
+function x() {
+  setTimeout(function () {
+    // if you decalre here also it will work
+    console.log(i, "divaaaaaaaaaaaaa"); //1  the setTimeout callback correctly logs 1 after one second because i is defined and initialized before the callback is executed.
+  }, 1000);
+  let i = 1; //even for var it will work
+}
+x();
+
+const json = [
+  {
+    name: "fgh",
+    link: "fggg",
+    subitems: [
+      {
+        name: "gh",
+      },
+    ],
+  },
+  {
+    name: "fgh",
+    link: "fggg",
+    subitems: [
+      {
+        name: "gh",
+      },
+    ],
+  },
+  {
+    name: "fgh",
+    link: "fggg",
+    subitems: [
+      {
+        name: "gh",
+      },
+    ],
+  },
+];
+
+// Function to get all names
+function getAllNames(json) {
+  const names = [];
+
+  json.forEach((item) => {
+    // Add the main item name
+    names.push(item.name);
+
+    // Add the names of subitems
+    item.subitems.forEach((subitem) => {
+      names.push(subitem.name);
+    });
+  });
+
+  return names;
+}
+
+const allNames = getAllNames(json);
+console.log(allNames);
