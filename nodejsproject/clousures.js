@@ -48,13 +48,13 @@ function x() {
 }
 x();
 // output is 10 times 11 will print but when you change var to let then it will print 1 to 10
-// use let instead of var because let has block scope. So for each and every loop iteration, i will be new variable every time. New copy of i will be in memory every time.
+// use let instead of var because let has block scope. So for each and every loop iteration, it will be new variable every time. New copy of i will be in memory every time.
 // When setTimeout() runs , callback function will have new copy of i with it.
 
 // What if var declaration is moved to Line 5, will the code work?
 function outer() {
   function inner() {
-    console.log(a);
+    console.log(a, "testinggggg"); //
   }
   var a = 10;
   return inner;
@@ -65,7 +65,7 @@ close(); // this will give you inner function and equivalent
 // What if var is replaced by let in Line 5. What will happen?
 function outer() {
   function inner() {
-    console.log(a);
+    console.log(a, "testing22222222222");
   }
   let a = 10;
   return inner;

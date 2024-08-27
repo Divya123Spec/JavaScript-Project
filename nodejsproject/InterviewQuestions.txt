@@ -1,0 +1,20 @@
+perofomace
+how javascript will work
+lexical scope
+html display
+seudo elements
+call apply bind where to use
+you have many lines of code how to divide into cmall
+responsive without semantic elements
+semantic elements
+distance beween 2 divs if you have margin 20 with one div and 50 one div
+flatten the array without flat method
+does type script will understand the browser (no)
+useefect api call 
+all hooks
+clousers
+reverse string
+call api and return data show in input field
+input tag arratibutes   
+Https and http
+

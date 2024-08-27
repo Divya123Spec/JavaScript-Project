@@ -1,3 +1,28 @@
+// Event delegation in javascript
+// event delegation is a technique to add event listener to multiple elements with a single event listener
+// event delegation in js is a technique where you attach a single event handler to a parent element to handle events on its child elements
+
+const { example } = require("yargs");
+
+// example
+{
+  /* <ul id="myList">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+</ul>; */
+}
+
+// var parentList = document.getElementById("myList");
+// parentList.addEventListener("click", handleClickevent());
+
+// function handleClickevent(e) {
+//   if (e.target.tagName === "LI") {
+//     console.log(e.target.innerHTML);
+//   }
+// }
+
 // what are events? how are events tirgered in js?
 // Events are actions that happen in the browser, such as click,mouse movment or keyboard input.
 <button id="myButton">Click me</button>;
@@ -45,7 +70,7 @@ const { example } = require("yargs");
 
 // What is Event bubbling in js?(from child to parent)
 // Event bubbling is a phase in event propagation where the event moves from the target element to the root element.
-// Event triggered is the process in javasectipt where event triggered on the child element propagates up the DOm tree,
+// Event triggered is the process in javascript where event triggered on the child element propagates up the DOm tree,
 // triggering the event handler of the parent element.
 
 <div id="outer">
@@ -53,7 +78,7 @@ const { example } = require("yargs");
     <button id="myButton">Click me</button>;
   </div>
 </div>;
-// get the refrence od elements
+// get the refrence Id elements
 var outer = docment.getElementById("outer");
 var inner = docment.getElementById("inner");
 var button1 = docment.getElementById("myButton");

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Iteration on Click</title>
+  </head>
+  <body>
+    <button id="hiButton">Hi</button>
+    <p id="nameDisplay"></p>
+
+    <script>
+      const arr = ["Divya", "Soumi", "Penny"];
+      let index = 0;
+
+      document
+        .getElementById("hiButton")
+        .addEventListener("click", function () {
+          // Get the nameDisplay element
+          const nameDisplay = document.getElementById("nameDisplay");
+
+          // Display the current name
+          nameDisplay.textContent = arr[index];
+
+          // Increment the index, reset if it reaches the end of the array
+          index = (index + 1) % arr.length;
+        });
+    </script>
+  </body>
+</html>

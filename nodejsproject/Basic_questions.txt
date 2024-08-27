@@ -1,0 +1,4 @@
+Https and Http
+
+Http does not provide any certificate for secure mechanisam  to encrypt the data.
+HTTPS provides SSL or TLS digital certificates to secure the communication between server and client

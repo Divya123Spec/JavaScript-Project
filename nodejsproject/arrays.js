@@ -2,7 +2,7 @@
 // An array is a datatype that allows you to store the multiple values in asingle variable.
 // Arrays are used to store the structured data.
 
-const { difference } = require("lodash");
+const { difference, spread } = require("lodash");
 
 // example
 let fruits = ["apple", "banana", "mango"];
@@ -287,3 +287,13 @@ let x3 = true;
 let y3 = false;
 let z2 = x3 + y3 && x3 * y3;
 console.log(z2); //0
+
+// useeffect
+// immv
+// rest spread
+// reverse string
+
+// imediate invoke function
+let greeting = "Hellow World"(function () {
+  console.log("greetin", greeting);
+})();

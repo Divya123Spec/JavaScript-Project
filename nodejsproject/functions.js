@@ -334,3 +334,40 @@ var randomFunction = function () {
   };
 };
 setInterval(randomFunction, 1000);
+
+// call
+function greet(greeting, punctuation) {
+  console.log(greeting + ", " + this.name + punctuation);
+}
+const person = { name: "Alice" };
+greet.call(person, "Hello", "!"); // Output: Hello, Alice!
+
+// apply
+function greet(greeting, punctuation) {
+  console.log(greeting + ", " + this.name + punctuation);
+}
+const person = { name: "Bob" };
+greet.apply(person, ["Hi", "."]); // Output: Hi, Bob.
+
+// bind
+// The bind() method creates a new function that, when called,
+// has its this keyword set to the provided value, and the initial arguments can also be set.
+function greet(greeting, punctuation) {
+  console.log(greeting + ", " + this.name + punctuation);
+}
+const person = { name: "Charlie" };
+const greetPerson1 = greet.bind(person, "Good morning");
+greetPerson1("!"); // Output: Good morning, Charlie!
+
+const person = {
+  name: "Divya",
+  place: "Banglore",
+};
+
+function example(greeting, firstname) {
+  console.log(greeting + " " + firstname + " " + this.name + " " + this.place);
+}
+example.call(person, "hello", "duddukunta");
+example.apply(person, ["hi", "D"]);
+let example2 = example.bind(person, "good morning");
+example2("DD");

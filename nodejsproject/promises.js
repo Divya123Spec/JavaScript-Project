@@ -243,3 +243,29 @@ function getAllNames(json) {
 
 const allNames = getAllNames(json);
 console.log(allNames);
+
+// real time example of promises
+// A function that returns a Promise
+function checkUserLoggedIn() {
+  return new Promise((resolve, reject) => {
+    // Simulate an asynchronous operation using setTimeout
+    setTimeout(() => {
+      const loggedIn = true; // Simulate the result
+
+      if (loggedIn) {
+        resolve("User is logged in");
+      } else {
+        reject("User is not logged in");
+      }
+    }, 2000); // Simulate a 2-second delay
+  });
+}
+
+// Using the Promise
+checkUserLoggedIn()
+  .then((message) => {
+    console.log(message); // If the promise is resolved
+  })
+  .catch((error) => {
+    console.error(error); // If the promise is rejected
+  });

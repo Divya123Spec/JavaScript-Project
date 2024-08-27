@@ -19,7 +19,7 @@
 //     </body>
 // </html>
 
-// What are clinet side and server side languages?
+// What are client side and server side languages?
 // A clinet is a device, application, or software component that requests and consumes services or resources from aserver.
 // A server is device,computer,or software application that provides a service, resources,or functions to clinet.
 
@@ -237,3 +237,7 @@ console.log(boolean + nullVariabl); //1, here null is converted to 0 and then ad
 // Loaders: Webpack enables you to preprocess files as you import or “load” them.
 // Plugins: Webpack has a rich plugin interface. Most of the features within Webpack itself use this plugin interface.
 // dev server: Webpack comes with a built-in development server which can be used to  live reloading your web app.
+
+// what is Temporal dead zone in JS?
+// it is a specific time period in execution of javacript code where the variable  declared
+// with let and const exists but cannot be accessed until the value is assigned.
