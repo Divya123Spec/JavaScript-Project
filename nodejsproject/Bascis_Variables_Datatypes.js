@@ -231,6 +231,13 @@ console.log(boolean + nullVariabl); //1, here null is converted to 0 and then ad
 // Webpack is used to bundle all the html files into a single file.
 // Webpack is used to bundle all the json files into a single file.
 
+// This bundling process is essential for optimizing the performance of web applications by
+// minimizing the number of requests the browser needs to make.
+// Entry Point:
+
+// Webpack starts with an entry point, usually the main JavaScript file where your React app begins.
+//  This is typically src/index.js in a React project.
+
 // what are key features of webpack
 // Webpack is a static module bundler for modern JavaScript applications.
 // code splitting: Webpack allows you to split your code into multiple bundles which can then be loaded on demand or in parallel.
@@ -241,7 +248,8 @@ console.log(boolean + nullVariabl); //1, here null is converted to 0 and then ad
 // what is Temporal dead zone in JS?
 // it is a specific time period in execution of javacript code where the variable  declared
 // with let and const exists but cannot be accessed until the value is assigned.
-console.log(3 - "3"); //
+
+console.log(3 - "3"); //0, here string is converted to number and then subtracted.
 //  when you - both operands will convert into numbers
 // when you  + both opernads will convert into strings
 
