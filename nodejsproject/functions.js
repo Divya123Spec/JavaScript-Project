@@ -45,6 +45,13 @@ const sum = function (a, b) {
 // What are arrow functions? what is it use?
 // Arrow functions are a new way to write function expressions in JavaScript.
 // Arrow functions are more concise way of writing function expressions.
+// syntax diff
+// 1.syntax diff
+// 2.this key word we don't have here we have the globla scope
+// 3.we don't have argument object inside arrow so we use spread opertor
+
+
+
 // syntax:
 // const functionName = (parameters) => {function body}
 const add = (a, b) => a + b;
@@ -221,6 +228,7 @@ const triple = curriedMultiply(3);
 console.log(triple(5)); // 15
 
 // What are call , bind and apply methods in JavaScript?
+//  we can attach the new scope of this to the current function so it will not target the current and it will tagregt new values
 
 // 1. call method
 // The call() method is a predefined JavaScript method.

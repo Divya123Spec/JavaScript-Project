@@ -297,3 +297,8 @@ console.log(z2); //0
 let greeting = "Hellow World"(function () {
   console.log("greetin", greeting);
 })();
+
+// how to get second last element from an array
+let arr = [10, 20, 30, 40, 50];
+let secondLast = arr[arr.length - 2];
+console.log(secondLast); //

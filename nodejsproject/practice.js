@@ -109,3 +109,59 @@ const cumulativeSum = arr => arr.reduce((acc, num) =>
 const longestConsecutiveSequence = 
 (arr, element) => Math.max(...arr.join('').split(element).map(group => group.length));
 
+
+console.log(abc)
+var abc =1
+
+myVar = 5
+console.log(myVar); // Output: undefined
+
+var myVar ;
+
+// console.log(myVar); // Output: 5
+
+let arr1 = [1,2,3,4,5,6]
+let arr2 = [...arr1]
+console.log(arr2) // to sread the array or to copy the elemenst from one to aother we can use
+
+function add(a,...b){
+ const sum  = b.reduce((acc,num) =>acc+num,a)
+ console.log(sum)
+}
+add(1,3,4)
+
+// function currying
+ function sum(a){
+return function(b){
+   const sum = a+b
+   console.log(sum)
+}
+ }
+
+ const addition = sum(1)
+ const add2 = addition(1)
+
+ function multiply(a){
+    return function(b){
+     return a*b
+    }
+ }
+console.log(multiply(7)(4))
+
+
+function addData(data){
+let convertToString = "" +data
+console.log(convertToString,"ghj")
+let converttoArray = convertToString.split('').map((data) =>{
+    return parseInt(data)
+})
+console.log(converttoArray)
+let finaloutput = converttoArray.reduce((a,b) =>a+b)
+if(finaloutput >10){
+    addData(finaloutput)
+}else{
+    console.log(finaloutput)
+}
+} 
+
+addData(3456)
