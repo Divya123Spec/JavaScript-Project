@@ -17,4 +17,7 @@ reverse string
 call api and return data show in input field
 input tag arratibutes   
 Https and http
+clousers
+output question on settimeout
+promise 
 

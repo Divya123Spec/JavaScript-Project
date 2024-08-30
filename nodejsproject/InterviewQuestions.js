@@ -14,10 +14,10 @@
 // Q4. map vs filter
 // Q5. Prototype and how it works?
 // Q6. Arrow function and advantages of arrow function
-// - Don't have this scope. Closer parent will have access. If no then target to global. No argument objects, use rest operator, Arrow functions are not hoisted. 
+// - Don't have this scope. Closer parent will have access. If no then target to global. No argument objects, use rest operator, Arrow functions are not hoisted.
 // Q7. When we use bind VS call apply and bind
 // Q8. Difference between spread and rest operator.
-// Q9. //Get second last element from array. 
+// Q9. //Get second last element from array.
 
 // let arr = ["a", "b", "c", "d", "e", "f"];
 // output = "e"
@@ -28,11 +28,11 @@
 // console.log(3+"3")
 // console.log(3-"3")
 
-// Q11 NodeJS Middleware? 
+// Q11 NodeJS Middleware?
 
 // Q12 React Element vs Component
 
-// Q13 What are pure components? 
+// Q13 What are pure components?
 
 // Q14 What are refs in React?
 
@@ -44,12 +44,28 @@
 
 // Q18 React fibre?
 
-// Q19. React lifecycles? 
+// Q19. React lifecycles?
 
-// Q20 In which case you will use HOC? :: 
+// Q20 In which case you will use HOC? ::
 
 // Q21 Lazy loading ?
 
 // Q22 How to manage nested routes in terms of role based routing?
 
 // Q23 Ask to interview :: What are roles, project etc.
+
+for (var i = 0; i < 10; i++) {
+  setTimeout(() => {
+    console.log(i);
+  }, 1000);
+}
+
+setTimeout(() => {
+  console.log(1);
+}, 0);
+
+Promise.resolve(1).then(() => {
+  console.log(2);
+});
+
+console.log(3);
