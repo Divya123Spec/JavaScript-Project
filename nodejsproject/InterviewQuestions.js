@@ -69,3 +69,19 @@ Promise.resolve(1).then(() => {
 });
 
 console.log(3);
+
+let nestedArray = [1, [2, 3], [4, [5, 6]]];
+let flatArray = nestedArray.flat(Infinity);
+console.log(flatArray);
+
+let result = [];
+function flatten(arr) {
+  for (arr in ele) {
+    if (Array.isArray(ele)) {
+      flatten(ele);
+    } else {
+      result.push(ele);
+    }
+  }
+}
+flatten(nestedArray);
