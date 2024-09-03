@@ -53,3 +53,36 @@
 // Q22 How to manage nested routes in terms of role based routing?
 
 // Q23 Ask to interview :: What are roles, project etc.
+
+
+
+const user = {
+    name: "John",
+    age: 30
+  }; 
+
+  const {name, age} = user;
+
+  let num =0;
+  console.log(num || 100) // 100 here first operator is trithy then it will return otherwise it will return sec
+  console.log(num ?? 100) // 0 here if first opertort is null or undefined then only first opertor will display
+
+  let user2 = {};
+ console.log(user2.address.street)  // here it will throw an error and undefined
+ console.log(user2?.address?.street) //here it won't throw an error and undefined 
+
+ const arr = [{ a: 1 }, { b: 1 }];
+const obj = [{ c: 2 }]; 
+arr.push(...obj);
+
+
+
+const test = [
+  { name: 'name1', isStudent: true },
+  { name: 'name2', isStudent: false },
+  { name: 'name3', isStudent: true }
+];
+
+
+const newArr = test.filter((item) =>item.isStudent)
+.map((item) => ({item:item.name}))

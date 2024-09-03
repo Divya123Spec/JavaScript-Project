@@ -14,6 +14,17 @@ function countDown(fromNumber) {
 }
 countDown(3); // 3 2 1 here the function is calling itself until the condition is met
 
+
+
+function numbers(nextNum){
+let superNext = nextNum -1
+if(superNext > 0){
+  countDown(superNext)
+}
+}
+
+numbers(3) // 3 2 1 
+
 let input = [1, 1, 4, 2, 2, 2, 6, 6, 1];
 
 // how to get below output add duplicates and return the array
