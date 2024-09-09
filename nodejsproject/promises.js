@@ -15,6 +15,15 @@ const promise = new Promise((resolve, reject) => {
   }
 });
 
+
+const promises = new Promise((reslove,reject) =>{
+  const res = true;
+  if(res){
+    reslove("success")
+    }else{
+      reject("falied")
+    }
+}) 
 const dos = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -269,3 +278,21 @@ checkUserLoggedIn()
   .catch((error) => {
     console.error(error); // If the promise is rejected
   });
+
+
+  const promise1 = new Promise((reslove,reject) =>{
+    const success = true;
+    if(success){
+    reslove("promise is resloved")
+    }else{
+    reject("promise is rejected")
+    }
+    })
+    
+    myPromise 
+    .then((messgae) =>{
+    console.log("message")
+    })
+    .catch((message) =>{
+    console.log("error")
+    })

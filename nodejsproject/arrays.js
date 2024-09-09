@@ -302,3 +302,17 @@ let greeting = "Hellow World"(function () {
 let arr = [10, 20, 30, 40, 50];
 let secondLast = arr[arr.length - 2];
 console.log(secondLast); //
+
+
+const obj ={}
+
+let str3 ="Divya is Divs and place is place"
+
+for(let x of str3){
+  if(obj[x]){
+    obj[x]+1
+  }else{
+    obj[x]=1
+  }
+}
+console.log(obj)

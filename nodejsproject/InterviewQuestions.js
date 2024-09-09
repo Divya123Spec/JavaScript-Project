@@ -8,6 +8,8 @@
 //     setTimeout(function(){console.log(i)}, 1000)
 // }
 
+const { repeat } = require("lodash");
+
 // for(var i=0; i<=2; i++){print(i)}
 
 // Q3. Types of copy (Shallow vs Deep)
@@ -53,7 +55,11 @@
 // Q22 How to manage nested routes in terms of role based routing?
 
 // Q23 Ask to interview :: What are roles, project etc.
+// how to convert string to number without using pasreInt()
 
+// regex for validations
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const nameRegex = /^.{1,50}$/;
 
 
 const user = {
@@ -86,3 +92,44 @@ const test = [
 
 const newArr = test.filter((item) =>item.isStudent)
 .map((item) => ({item:item.name}))
+
+
+
+// non repeat ele in string
+
+function firstNonRepeatingCharacter(s) {
+  // Convert string to an array of characters
+  const chars = s.split('');
+  
+  // Step 1: Count the frequency of each character
+  const charCount = chars.reduce((count, char) => {
+      count[char] = (count[char] || 0) + 1;
+      return count;
+  }, {});
+  
+  // Step 2: Find the first non-repeating character
+  const result = chars.find(char => charCount[char] === 1);
+  
+  return result || null; // Return null if no non-repeating character is found
+}
+
+// Example usage
+const inputString = "swiss";
+const result = firstNonRepeatingCharacter(inputString);
+console.log(result); // Output: 'w'
+
+
+// duplicate array
+
+const array = [1, 2, 2, 3, 4, 4, 5];
+const uniqueArray = array.filter((item, index, self) => 
+    self.indexOf(item) === index
+);
+
+console.log(uniqueArray);
+
+
+const _ = require('lodash');
+const uniqueArray2 = _.uniq(array);
+
+console.log(uniqueArray2);
