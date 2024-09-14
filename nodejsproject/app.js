@@ -42,17 +42,15 @@ const { array } = require("yargs");
 //    console.log('hello')
 //  }
 
+let arrayofarrys = [1, 2, 3, [4, 5, 6], [7, 8, 9]];
+flatarry = arrayofarrys.flat(3);
+console.log(flatarry);
+var d = "a ab abcd aaaaabcd abcdddef";
+new Set(d);
+console.log(d);
 
- let arrayofarrys =[1,2,3,[4,5,6],[7,8,9]]
- flatarry = arrayofarrys.flat(3);
- console.log(flatarry);
- var d = "a ab abcd aaaaabcd abcdddef";
- new Set(d);
- console.log(d);
-
-
- var x = "sk ab rwtasaas ratwuysssweeaq tehsgetsstgggs"
-x = x.split(",")
+var x = "sk ab rwtasaas ratwuysssweeaq tehsgetsstgggs";
+x = x.split(",");
 // x = Array.from(new Set(x.split(',')));
 console.log(x); //
 
@@ -61,7 +59,6 @@ console.log(x); //
 //   console.log(longestWord[0])
 // }
 // findLongestWord("The quick brown fox jumped over the lazy dog");
-
 
 // function longest(str){
 //   str = str.split(' ');
@@ -80,8 +77,6 @@ console.log(x); //
 // }
 // console.log(removeDuplicateCharacters('sk ab rwtasaas ratwuysssweeaq tehsgetsstgggs'));
 
-
-
 // var a = "sk ab rwtasaas ratwuysssweeaq tehsgetsstgggs";
 // var x1 = a.split(" ");
 // var x2 = [];
@@ -97,38 +92,33 @@ console.log(x); //
 //   }
 //   longest(x2) // here we have to pass x2
 
-
-
 //higher order component
-// function add (a, b) {  
-//   return a + b  
-// }  
-// function higherOrder(a, addReference) {  
-//   return addReference(a, 20)  
-// }  
-// //Function call  
-// higherOrder(30, add) // 50 
-
+// function add (a, b) {
+//   return a + b
+// }
+// function higherOrder(a, addReference) {
+//   return addReference(a, 20)
+// }
+// //Function call
+// higherOrder(30, add) // 50
 
 // async
 // const getData = async() => {
 //     var data = "Hello World";
 //     return data;
 // }
-  
-// getData().then(data => console.log(data));
 
+// getData().then(data => console.log(data));
 
 // await
 // const getData = async() => {
 //     var y = await "Hello World";
 //     console.log(y);
 // }
-  
+
 // console.log(1);
 // getData();
 // console.log(2);
-
 
 // copy1 ={
 //     name :'divya',
@@ -137,29 +127,22 @@ console.log(x); //
 //  copy2 =JSON.parse(JSON.stringify(copy1))
 //  console.log(copy2)
 
-
-
-
-
 // interveiw questions
-var  x = 5;
-console.log(x === 5)
+var x = 5;
+console.log(x === 5);
 
+let abc = {
+  passenger: {
+    name: "divya",
+    age: 24,
+  },
+};
 
-let abc ={
-    passenger:{
-        name:'divya',
-        age:24
-    }
-}
+let xyz = { ...abc };
+xyz.passenger.name = "duddukunta";
+console.log(abc.passenger.name);
 
-let xyz = {...abc}
-xyz.passenger.name ="duddukunta"
-console.log(abc.passenger.name)
-
-
-
-// call apply bind 
+// call apply bind
 // var employee1 = {firstName: 'John', lastName: 'Rodson'};
 // var employee2 = {firstName: 'Jimmy', lastName: 'Baily'};
 
@@ -175,13 +158,11 @@ console.log(abc.passenger.name)
 // invite.apply(employee1, ['Hello', 'How are you?']); // Hello John Rodson, How are you?
 // invite.apply(employee2, ['Hello', 'How are you?']); // Hello Jimmy Baily, How are you?
 
-
 // // bind  returns a new function, allowing you to pass any number of arguments
 // var inviteEmployee1 = invite.bind(employee1);
 // var inviteEmployee2 = invite.bind(employee2);
 // inviteEmployee1('Hello', 'How are you?'); // Hello John Rodson, How are you?
 // inviteEmployee2('Hello', 'How are you?'); // Hello Jimmy Baily, How are you?
-
 
 //memoization
 // const memoizAddition = () => {
@@ -199,11 +180,10 @@ console.log(abc.passenger.name)
 //     }
 //    }
 //   }
-  // returned function from memoizAddition
+// returned function from memoizAddition
 //   const addition = memoizAddition();
 //   console.log(addition(20)); //output: 40 calculated
 //   console.log(addition(20)); //output: 40 cached
-
 
 //   current date
 // var today = new Date();
@@ -213,10 +193,6 @@ console.log(abc.passenger.name)
 
 // today = mm + '/' + dd + '/' + yyyy;
 // document.write(today);
-
-
-
-
 
 // let zero = new Number(0);
 
@@ -233,38 +209,36 @@ console.log(abc.passenger.name)
 //  let abc =string.split(' ')
 // console.log(abc[3]);
 
-
 // let str = 'The quick brown fox jumps over the lazy dog.';
 // let words = str.split(' ');
 // console.log(words[3]);
 
-
 // for(var i=0; i<5; i++){
-//     abc(i); 
+//     abc(i);
 //    }
-   
+
 //     function abc(i){
 //      setTimeout(function() {
 //        console.log(i);
-//      }, 1000); 
+//      }, 1000);
 //    }
 
-  //  promises
+//  promises
 
-  // let p = new Promise ((resolve,reject) =>{
-  // let a =1+1 
-  // if(a==2){
-  //   resolve("Success")
-  // }else{
-  //   reject('failed')
-  // }
-  // })   
+// let p = new Promise ((resolve,reject) =>{
+// let a =1+1
+// if(a==2){
+//   resolve("Success")
+// }else{
+//   reject('failed')
+// }
+// })
 
-  // p.then((message) =>{
-  //   console.log('this is in the then ' + message)
-  // }).catch((message) =>{
-  //   console.log('this is in the catch' +message)
-  // })
+// p.then((message) =>{
+//   console.log('this is in the then ' + message)
+// }).catch((message) =>{
+//   console.log('this is in the catch' +message)
+// })
 
 // let p = new Promise((resolve, reject) => {
 //     setTimeout(() => {
@@ -308,34 +282,31 @@ console.log(abc.passenger.name)
 //   console.log(`Total: ${total}`);
 // });
 
-
 // Array featres
 
 const example = ({ a, b, c }) => {
   console.log(a, b, c);
- };
- example(0, 1, 2);
+};
+example(0, 1, 2);
 
-
- function sum(a) {
+function sum(a) {
   return (b) => {
-      return (c) => {
-          return a + b + c
-      }
-  }
+    return (c) => {
+      return a + b + c;
+    };
+  };
 }
-console.log(sum(1)(2)(3)) // 6
+console.log(sum(1)(2)(3)); // 6
 
-
-function prime(num){
-  if(num<=0){
+function prime(num) {
+  if (num <= 0) {
     return false;
   }
-  for(i=1;i<=Math.sqrt(num);i++){
-    if(num % i ===0){
-    return false
-    }else{
-      return true
+  for (i = 1; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    } else {
+      return true;
     }
   }
 }
@@ -347,9 +318,6 @@ if (prime(num)) {
   console.log(num + " is not a prime number.");
 }
 
-
-
-
 // function longeststr(tsr) {
 //     let lon = tsr.split('')
 //   console.log("longest",lon.sort((a,b) =>b.length-a.length)[0])
@@ -358,29 +326,27 @@ if (prime(num)) {
 
 // longeststr("sk ab rwtasaas ratwuysssweeaq tehsgetsstgggs")
 
+function removeDuplicates(inputString) {
+  const charArray = inputString.split("");
+  const uniqchar = [...new Set(charArray)];
 
-function removeDuplicates(inputString){
-  const charArray = inputString.split('');
-  const uniqchar = [...new Set(charArray)]
- 
-  const finalchar = uniqchar.join('')
-  console.log(finalchar)
+  const finalchar = uniqchar.join("");
+  console.log(finalchar);
 }
 
-
-removeDuplicates("wertuioporeertuioiuyretyuio")
+removeDuplicates("wertuioporeertuioiuyretyuio");
 
 function* foo() {
-  yield 'a';
-  yield 'b';
-  yield 'c';
+  yield "a";
+  yield "b";
+  yield "c";
 }
 const foogee = foo();
-console.log('getting the first value');
+console.log("getting the first value");
 console.log(foogee.next());
-console.log('getting the next value');
+console.log("getting the next value");
 console.log(foogee.next());
-console.log('getting the next value');
+console.log("getting the next value");
 console.log(foogee.next());
-console.log('getting the next value');
+console.log("getting the next value");
 console.log(foogee.next());
