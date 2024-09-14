@@ -11,3 +11,41 @@ immediate feedback to user
 increased interactivity
 richer interface
 
+when to use asyn and when to use Promise
+
+
+ If you have asynchronous operations that need to be executed in sequence, 
+ async/await can make the code look synchronous and easier to read.
+ allows you to use try/catch blocks for error handling, 
+ which can be more intuitive than chaining .catch() in Promises.
+
+ Chaining Multiple Operations: When you have a sequence of asynchronous operations that depend on each other, 
+ Promises are useful for chaining .then() calls to handle each step.
+
+ Handling Multiple Concurrent Operations: 
+ When you need to perform multiple asynchronous operations concurrently and
+  handle their results collectively, Promise.all() or Promise.race() are useful.
+
+1. == and === 
+== check values and === checks data types
+
+2.this is lexcially boundned in es6 
+meaning it inherits the value of this from the surrounding context where the arrow function was defined. 
+In other words, arrow functions do not create their own this context.
+
+3.native - array,objects ,strings,number,date,boolean
+4.host objects - window,document,HTMLElement,XMLHttpRequest,localStorage,fetch,navigator,console
+
+
+
+weakMap()
+weakMap allows you to store a collection of Key-Value pairs. 
+ The Major difference is that keys of WeakMap cannot be a primitive data type. 
+ The keys must be of type object and values can be of any data type. 
+ Another major difference is that the key of WeakMap is weakly referenced. 
+ It means that whenever an object is used as a key for WeakMap, that object can be garbage 
+ 
+ WeakSet()
+ t adapts the same properties of that of a set i.e. does not store duplicates. 
+ The major difference of a WeakSet with a set is that a WeakSet is a collection of objects 
+ and not values of some particular type. 

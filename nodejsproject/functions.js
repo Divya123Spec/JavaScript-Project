@@ -209,7 +209,7 @@ console.log(increment()); // 1
 console.log(increment()); // 2 // here we are getting different output for same input
 
 // What is function currying?
-// Currying in javascript transforms a function with multiple arguments into a nested series of functions, each taling a single argumnent.
+// Currying in javascript transforms a function with multiple arguments into a nested series of functions, each taking a single argumnent.
 // Advantages of currying : 1. Code reusability 2. Partial application, For big complex functions we can break down into smaller functions.
 // EXAMPLE
 function multiply(a, b) {
