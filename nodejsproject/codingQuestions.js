@@ -1,5 +1,7 @@
 // Write a code to display which character is coming how many times in a given string ?
 
+const { result } = require("lodash");
+
 const Countoccurance = (str) => {
   let exists = {};
   for (i = 0; i < str.length; i++) {
@@ -70,3 +72,127 @@ function reverseWords(input) {
 let input = "ReactJS JavaScript & Redux";
 let output = reverseWords(input);
 console.log(output, "rever"); // Output: "Redux & JavaScript ReactJS"
+
+
+// Array to Object
+let array = [1,2,3,4,5]
+let obj = {}
+
+array.forEach((value,index)=>{
+  obj[index] = value
+})
+console.log(obj)
+
+const obj3 = Object.assign({},array)
+console.log(obj3)
+
+console.log(5 > '15' <5) 
+// 5 > 15  => flase
+// 0 <5 => ture
+
+console.log(7 < '85' <7) 
+// 7 < 15 => ture
+// ture < 7 => 1<7 => ture
+console.log(7<'85' > 5)
+// 7 < 85 => ture
+//  true > 5 => flase
+
+
+for(var i=0; i<4 ; i++){
+  (function(i){
+    setTimeout(function(){
+      console.log(i);
+    },14000)
+  })(i)
+}
+
+console.log(3 > 4 > 5)
+// 3 > 4 => false
+// 0 > 5 => false
+
+
+console.log(3 < 4 < 5)
+// false = 0
+// 0 <5 = true 
+console.log(3> 4 > -1)
+// false =0
+// 0 > -1 = true 
+
+
+var x =10 ;
+function get () {
+  console.log(x); //undefined
+  var x =20;
+}
+get(); 
+const a =[1,2,3]
+a.push(4)
+Object.freeze(a)
+a[0] =10;
+console.log(a);
+
+// map function
+
+let arr =[ 1,2,3,4,5]
+
+function multiplyBy2(arr){
+  let resultArr =[]
+
+  for(i =0 ;i<arr.length; i++){
+    resultArr.push(arr[i] *2)
+  }
+  return resultArr
+}
+console.log(multiplyBy2(arr))
+
+
+
+ let obj1 = {a: 1, b: 2, c: 3, d: 10, e: 12, f: 6} ;
+let obj2 = {a: 5, b: 7, e: 12, d: 10};
+// Find out the identical key value pairs from two different objects: 
+function findIdenticalPairs(obj1,obj2){
+  const indeticalPairs ={};
+  for(const key in obj1){
+    if(obj2.hasOwnProperty(key) && obj1[key] === obj2[key]){
+      indeticalPairs[key] = obj1[key]
+    }
+  }
+return findIdenticalPairs
+}
+
+findIdenticalPairs(obj1,obj2)
+
+
+// function z(){
+//   for(var i = 1; i<= 5;i++){
+//     function close(x){
+//       setTimeout(function(){
+//         console.log(x)
+//       }, i*1000)
+//     }
+//     close(i);
+//   }
+//   console.log("hi Divya")
+// }
+// z();
+
+function y(){
+  for (var i =1; i<=5; i++){  
+     setTimeout(function(){
+       console.log(i);
+     },i * 1000);
+  }
+ }
+ y() // 66666 to get 55555 need to use i<5 not equal
+
+// to get 12345 using var  create a closure that captures the current value 
+function z(){
+  for( var i =1; i<=5;i++){
+  (function (x){
+    setTimeout(function(){
+      console.log(x);
+    },x*1000)
+  })(i)
+}
+}
+z();
