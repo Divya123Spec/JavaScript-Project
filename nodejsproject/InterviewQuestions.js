@@ -158,3 +158,8 @@ const _ = require("lodash");
 const uniqueArray2 = _.uniq(array);
 
 console.log(uniqueArray2);
+// array = [1,2,3,4,5,6,7,8,9,10]
+// target = 6
+// write a program to find the target number in the given array
+
+//
