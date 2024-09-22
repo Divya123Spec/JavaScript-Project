@@ -1,11 +1,11 @@
 var i = 3;
 function x() {
   setTimeout(function () {
-    console.log(i);
+    console.log(i,"i is outside");
   }, 1000);
   console.log("java");
 }
-// x(); // it will give fist java consloe then wait then give i , js doest not wait for anything
+x(); // it will give fist java consloe then wait then give i , js doest not wait for anything
 
 const { reject, uniq } = require("lodash");
 const { array } = require("yargs");

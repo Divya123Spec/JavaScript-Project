@@ -1,0 +1,23 @@
+what is z -index ?
+Use z-index to control the stacking order of overlapping elements. 
+If you need one element to appear in front of another (like dropdown menus or modals), z-index is necessary.
+Elements with a higher z-index are placed in front of elements with a lower z-index.
+The z-index only works on elements that have a positioning context other than static (i.e., they must have position: relative, absolute, fixed, or sticky).
+
+what is opacity?
+opacity is a CSS property that controls the transparency level of an element, 
+determining how visible or transparent it is. The value of opacity ranges from 0 (completely transparent) to 1 (completely opaque).
+
+0: Fully transparent (the element is invisible but still occupies space in the layout).
+1: Fully opaque (the element is completely visible).
+Decimal values between 0 and 1: Semi-transparent. For example, opacity: 0.5; makes the element 50% transparent.
+
+
+
+Difference Between z-index and opacity
+z-index and opacity are both CSS properties that affect how elements are displayed on a webpage, 
+but they control different aspects of an element's visibility and behavior.
+
+Definition:
+z-index: Controls the stacking order of elements along the z-axis (front-to-back), which determines which elements appear on top of or behind others.
+opacity: Controls the transparency of an element, determining how visible or transparent it is.

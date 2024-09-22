@@ -196,3 +196,41 @@ function z(){
 }
 }
 z();
+
+
+let example = "I love my India";
+
+// Split the string into an array of words
+let words = example.split(' ');
+
+// Sort the words by length in descending order and pick the first one
+let maxLengthWord = words.sort((a, b) => b.length - a.length)[0];
+
+// Output the result
+console.log("The word with the maximum length is:", maxLengthWord);
+
+
+  let arr2 = [1, 10, 2, 6, 5, 10];
+
+// Remove duplicates by converting the array to a Set, then back to an array
+let uniqueArr = [...new Set(arr2)];
+
+// Sort the array in descending order
+uniqueArr.sort((a, b) => b - a);
+
+// Find the first two maximum numbers and multiply them
+let result = uniqueArr[0] * uniqueArr[1];
+
+// Output the result
+console.log("The product of the two maximum numbers is:", result);
+
+function foo() {
+  console.log(1);
+}
+
+foo();
+var foo = function() {
+  console.log(2);
+};
+
+foo();
