@@ -21,3 +21,6 @@ but they control different aspects of an element's visibility and behavior.
 Definition:
 z-index: Controls the stacking order of elements along the z-axis (front-to-back), which determines which elements appear on top of or behind others.
 opacity: Controls the transparency of an element, determining how visible or transparent it is.
+
+
+along with z-index you need to give the postion of element
