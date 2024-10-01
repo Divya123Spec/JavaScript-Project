@@ -21,3 +21,17 @@ clousers
 output question on settimeout
 promise 
 
+
+What is hoisting
+Diff b/w var let
+What is scope and what types of scopes in js
+Map and filter
+Types of events in js
+What is onBlur()
+How to handle errors in js
+What is promise
+Call back function
+Example of promise function
+What is prototype
+What is closure
+Web accesiblity
