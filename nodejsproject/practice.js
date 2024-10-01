@@ -178,3 +178,5 @@ if (x > 0.5) {
 }
 console.log(x); // 2
 // The Math.floor() function returns the largest integer less than or equal to a given number.
+
+

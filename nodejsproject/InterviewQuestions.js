@@ -163,3 +163,122 @@ console.log(uniqueArray2);
 // write a program to find the target number in the given array
 
 //
+
+const removedup  =(arr) =>{
+ let uniqArr =[]
+ for(let i =0 ; i<=arr.length-1 ; i++){
+  if(uniqArr.indexOf(arr[i]) == -1){
+    uniqArr.push(arr[i])
+  }
+ }
+ return uniqArr;
+}
+removedup([1, 2, 1, 3, 4, 2, 2, 1, 5, 6])
+
+
+function evenArr(arr){
+  const result =[]
+
+  for(i=0 ;i<=arr.length ;i++){
+    if(arr[i] %2 === 0){
+      result.push(arr[i])
+    }
+    return result
+
+  }
+}
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8,-8,19, 9, 10];
+console.log("Even numbers:", evenArr(numbers));
+
+function panlidrome(str){
+  const len = str.length
+
+  for(i =0; i<len/2;i++){
+    if(str[i] !== str[len-i-1]){
+      return ""
+    }
+  }
+  return panlidrome
+}
+console.log(panlidrome("madam"))
+
+function factorial (num){
+  if(num == 0 ||  num ==1){
+    return 1
+  }else{
+    return num*factorial(num-1);
+  }
+}
+console.log(factorial(4));
+
+let str = "I am learning JavaScript and solving programming challenges"
+let longestWord = '';
+function findLongestWord(){
+  const words = str.split('')
+
+  for(let word of words){
+    if(word.length >longestWord.length){
+      longestWord = word;
+    }
+  }
+  return longestWord;
+}
+console.log(findLongestWord(str));
+function findMax(){
+  let max = arr[0];
+  for(i=0;i<arr.length ;i++){
+    if(arr[i]> max){
+      max=arr[i];
+    }
+  }
+  return max;
+}
+const number = [1, 6, -33, 9, 4, 8, 2];
+console.log("Maximum number is:", findMax(number));
+
+
+function reversedStr(){
+  let reversed = '';
+
+  for(i =str.length-1;i>=0 ;i--){
+    reversed +=str[i]
+  }
+  return reversed;
+}
+console.log(reversedStr("hello")); // Output: "olleh"
+console.log(reversedStr("JavaScript")); // Output: "tpircSavaJ"
+console.log(reversedStr("12345")); // Output: "54321"
+
+
+function findSmallestWord() {
+  const sentence = "Find the smallest word"; // The sentence to search
+  const words = sentence.split(' '); // Split the sentence into words
+  let smallestWord = words[0]; // Initialize smallestWord to the first word
+
+  // Loop through the words starting from the second word
+  for (let i = 1; i < words.length; i++) {
+    // If the current word is shorter than the smallestWord, update smallestWord
+    if (words[i].length < smallestWord.length) {
+      smallestWord = words[i];
+    }
+  }
+
+  console.log(smallestWord); // Output the smallest word
+}
+
+//  Call the function
+findSmallestWord(); // Output: "the"
+
+function fibonacci(n) {
+  let fibSeries = [0, 1]; // Initial two Fibonacci numbers
+
+  for (let i = 2; i < n; i++) {
+    fibSeries[i] = fibSeries[i - 1] + fibSeries[i - 2]; // Calculate next Fibonacci number
+  }
+
+  return fibSeries;
+}
+
+// Test case
+console.log(fibonacci(10)); // Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
