@@ -78,7 +78,7 @@ console.log(flatArray);
 
 let result1 = [];
 function flatten(arr) {
-  for (arr in ele) {
+  for (let ele of arr) {
     if (Array.isArray(ele)) {
       flatten(ele);
     } else {
@@ -105,8 +105,8 @@ console.log(num || 100); // 100 here first operator is trithy then it will retur
 console.log(num ?? 100); // 0 here if first opertort is null or undefined then only first opertor will display
 
 let user2 = {};
-console.log(user2.address.street); // here it will throw an error and undefined
-console.log(user2?.address?.street); //here it won't throw an error and undefined
+// console.log(user2.address.street); // here it will throw an error and undefined
+// console.log(user2?.address?.street); //here it won't throw an error and undefined
 
 const arr = [{ a: 1 }, { b: 1 }];
 const obj = [{ c: 2 }];
@@ -163,3 +163,120 @@ console.log(uniqueArray2);
 // write a program to find the target number in the given array
 
 //
+let emp = [
+  {
+    name: "divya",
+    age: 25,
+  },
+  {
+    name: "chinni",
+    age: 26,
+  },
+  {
+    name: "penny",
+    age: 20,
+  },
+  {
+    name: "rani",
+    age: 20,
+  },
+];
+
+// filter the below 26 value, and return the name nad age
+let filteredEmp = emp
+  .filter((item) => item.age < 26)
+  .map((item) => ({ name: item.name, age: item.age }));
+
+console.log(filteredEmp);
+
+{
+  /* <div>
+  {filteredEmp.map((item) => {
+    return (
+      <div>
+        {item.name} {item.age}
+      </div>
+    );
+  })}
+</div>; */
+}
+// document.getElementById("filterData").innerHTML = filteredEmp.map((item) => {
+//   return `<div>${item.name} ${item.age}</div>`;
+// });
+
+// const BtnClick = () => {
+//   console.log("Welcome Divya");
+// };
+{
+  /* <div onclick={BtnClick}>Welcome Divya</div>;
+
+const divSelect = document.getElementById("app");
+divSelect.addEventListener("click", (e) => {
+  console.log(e.target.innerHTML);
+}); */
+}
+const promise1 = new Promise((reslove, reject) => {
+  const num = 2;
+  if (num > 4) {
+    reslove("promise is resloved");
+  } else {
+    reject("promise is rejected");
+  }
+});
+
+promise1
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+function EmployeeNames() {}
+
+EmployeeNames.prototype = {
+  names: [],
+  showNames: function () {
+    return this.names;
+  },
+};
+var el = new EmployeeNames();
+el.names.push("Divya");
+console.log(el.showNames());
+
+var el2 = new EmployeeNames();
+el2.names.push("Chinni");
+console.log(el2.showNames());
+
+const person = {
+  name: "Divya",
+  age: 26,
+};
+
+// output:{["name", "Divya"], ["age", 26]}
+
+// 1 st way
+const entires = Object.entires(person);
+console.log(entires);
+
+// 2nd way
+const getObjectentires = (obj) => {
+  const objKeys = Object.keys(obj);
+  console.log(objKeys);
+  const result = objKeys.map((key) => {
+    const value = obj[key];
+    return [key, value];
+  });
+  return result;
+};
+getObjectentires(person);
+
+let a = {};
+
+let b = { a: 1 };
+let c = { b: 2 };
+a[b] = 123;
+a[c] = 456;
+console.log(a[b]); // 456 here object key will be converted to string
+// when you use an object as key in another object, it will be converted to string, the conversion resluts in [object Object] for both objects,
+// so the second assignment will overwrite the first one
