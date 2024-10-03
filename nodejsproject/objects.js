@@ -305,3 +305,28 @@ console.log(deepEqual(obj13, obj15)); // false
 const _ = require("lodash");
 console.log(_.isEqual(obj13, obj14)); // true
 console.log(_.isEqual(obj13, obj15)); // false
+
+
+// Shallow and Deep
+//Original object
+// const original = {
+//   name: "John", 
+//   age: 30, 
+//   hobbies: ["reading", "cooking"],
+//   address: {
+//     city: "New York", 
+//     state: "NY"
+// };
+// Shallow copy
+// const shallowCopy = Object.assign({}, original);
+
+// // Deep copy
+// const deepCopy = JSON.parse(JSON.stringify(original));
+
+// // Modifying a nested object
+// shallowCopy.address.city = "San Francisco";
+// deepCopy.address.city = "Los Angeles";
+
+// console.log(original.address city); // Output: "San Francisco" 
+// console.log(shallowCopy.address.city); // Output: "San Francisco" 
+// console.log(deepCopy.address.city); // Output: "Los Angeles"

@@ -58,7 +58,21 @@ filteredArr.map((item) =>{
 
  
  
- 
+// The event loop is an important part of the runtime that handles asynchronous code execution in a single-threaded environment.
+
+// It works by always looping over two main components:
+
+// the call stack, and
+// the task queue
+// The call stack is a data structure that tracks the execution of function calls. 
+// When a function is called, it is added to the top of the call stack, 
+// and when it finishes executing, it is removed from the stack.
+
+// (The task queue is a data structure that tracks events that have completed, 
+// but have not yet been added to the call stack).
+
+// These events are typically asynchronous in nature, such as user input or network requests, 
+// and so when an asynchronous event occurs, it is added to the task queue.
  
  
  

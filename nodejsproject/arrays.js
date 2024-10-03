@@ -316,3 +316,6 @@ for(let x of str3){
   }
 }
 console.log(obj)
+
+// How can you double elements of an array? Do not use extra variable?
+arr.reduce((accumulator, currentValue, index, array)=> array[index -1] =array[index -1] *2  )

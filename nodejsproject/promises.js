@@ -296,3 +296,24 @@ checkUserLoggedIn()
     .catch((message) =>{
     console.log("error")
     })
+
+
+
+// Explanation:
+// The fetchDataAsync function is declared as an async function.
+// Inside fetchDataAsync, the await keyword is used to wait for the completion of the asynchronous operation returned by fetchData.
+// The try and catch blocks are used to handle both successful resolution and errors in a more synchronous-looking structure.
+// Key Differences:
+// Syntax:
+
+// Promises use the .then() and .catch() methods for handling resolution and rejection.
+// async/await uses the async keyword to declare an asynchronous function and the await 
+// keyword to pause execution until the promise settles.
+// Readability:
+
+// async/await often provides more readable and concise code, resembling synchronous programming.
+// Promises can lead to nested and chained .then() calls, which might be less readable.
+// Error Handling:
+
+// Promises use .catch() for error handling.
+// async/await uses traditional try and catch blocks for error handling.

@@ -18,3 +18,23 @@ console.log(user.__proto__); // {}
 console.log(user.__proto === Object.prototype); // true
 console.log(Object.prototype); // {}
 console.log(Object.prototype.__proto__); // null
+
+
+// Prototypal inheritance is a mechanism where an object can inherit properties and methods 
+// from another prototype object. This means that every object has a prototype, 
+// which is an object that serves as a template for the new object…
+
+// Let me clear this up with an example.
+
+// Parent object
+const animal = {
+  type: 'unknown',
+  eat() {
+    console.log('The $(this.type} is eating.');
+  },
+};
+
+// child object
+const dog = Object.create(animal);
+dog.type = 'dog';
+dog.eat(); // Output: 'The dog is eating.'
