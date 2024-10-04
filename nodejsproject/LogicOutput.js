@@ -44,3 +44,35 @@ console.log(array.push(7));
 
 //
 console.log([] == false);
+
+
+console.log('bar:', bar); 
+bar = 15; 
+var foo = 1;
+console.log(foo, bar);
+var bar;
+
+//console.log(("one" < 8));  // false
+ 
+//
+var foo = 5
+console.log( foo)
+var foo;
+var bar = 10;
+var bar;
+console.log( bar)
+var baz = 10
+var baz = 12
+console.log( baz)
+
+//
+var x = 10;
+function testNum() {
+ console.log(x);
+ if (true) {
+ var x = 20;
+ }
+ console.log(x);
+}
+testNum();
+
