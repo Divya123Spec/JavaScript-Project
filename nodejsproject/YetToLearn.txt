@@ -1,0 +1,65 @@
+ JavaScript​:
+1. Fundamentals:
+ - Explain the difference between `var`, `let`, and `const`.
+ - What are closures and how do they work?
+ - Explain prototypal inheritance in JavaScript.
+
+2. ES6+ Features:
+ - What are arrow functions and how do they differ from regular functions?
+ - How do `async` and `await` work? What problem do they solve?
+
+3. DOM Manipulation:
+ - How do you add an event listener in JavaScript?
+ - Explain event delegation and its advantages.
+
+4. Asynchronous JavaScript​:
+ - What are promises? How do they differ from callbacks?
+ - What is `fetch` and how is it used for making HTTP requests?
+
+5. Error Handling:
+ - How can you handle errors in JavaScript?
+ - What is `try...catch` and how does it work?
+
+👉 HTML:
+1. Basic Tags and Attributes:
+ - What are semantic HTML elements? Give examples.
+ - Explain the difference between `<div>` and `<span>`.
+
+2. Accessibility:
+ - What is ARIA (Accessible Rich Internet Applications)? Why is it important?
+ - How can you improve the accessibility of a website?
+
+👉 CSS:
+1. Selectors and Specificity:
+ - Explain CSS selectors and specificity.
+ - How can specificity be overridden?
+
+2. Box Model:
+ - What is the CSS box model? Explain briefly.
+ - How can you change the box model behavior using CSS properties?
+
+3. Layout and Flexbox/Grid:
+ - What are Flexbox and Grid layout systems? How do they differ?
+ - When would you use Flexbox over Grid, and vice versa?
+
+4. Responsive Design:
+ - How can you make a website responsive using CSS?
+ - What are media queries? How are they used?
+
+
+ Prototype
+PWA
+servicer worker
+web accesiblity
+input validations(regex)
+box model
+media query
+postion relative and absloute
+audio
+video
+latest version of react what are the new features of react
+to render 2 diff images for mobile and laptop using grid
+technical round - basic HTML, java script, CSS, reactjs, es6 questions 2) 
+client round - React js questions, Redux toolkit, API integration, promise, 
+Functional components, class components, life cycle method, props - parent to child, props - child to parent, 
+Axios, combined reducer, thunk middle ware, Is loading how to implement, utility folder structure
