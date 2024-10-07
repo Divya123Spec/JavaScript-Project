@@ -117,3 +117,96 @@ console.log(r3); // Hello World
 
 // join() method
 let r4 = [s1, s2].join(" ");
+
+
+
+// Can you write a function in JavaScript to reverse the order of words in a given string?
+
+let arraWords = ["apple", "banana", "carrot", "kiwi"]
+let reverse = arraWords.reverse();
+let str1 = 'divya';
+let reverse1 =str1.split('').reverse().join('')
+console.log(reverse1)
+console.log(reverse)
+
+
+//Can you write a function in JavaScript to remove duplicate elements from an array?
+
+let arr = [1,2,3,4,1,2,3,4];
+let method1 = [...new Set(arr)];
+console.log(method1)
+
+function method2(arr){
+let result =[];
+for(i=0; i< arr.length; i++){
+if(!result.includes(arr[i])){
+result.push(arr[i])
+}
+}
+return result;
+}
+console.log(method2(arr))
+
+
+//Can you write a function in JavaScript to merge two objects without overwriting existing properties?  
+let obj1 = {
+    name : "Divya",
+    age :"24"
+    }
+    let obj2 ={
+    city :" bangalore",
+    hobby :"coding"
+    }
+    let obj3 = {...obj1,...obj2}
+    console.log(obj3);
+
+    // second method
+    function mergedObjects (target,source) {
+        for(let key in source){
+         if (!target.hasOwnProperty(key)){
+         target[key] = source[key];
+         }
+        }
+        return target;
+        }
+        
+        let obj11 = { a: 1, b: 2 };
+        let obj12 = { b: 3, c: 4 };
+        
+        let mergedObj = mergeWithoutOverwriting(obj11, obj12);
+        console.log(mergedObj); 
+
+// Can you write a function in JavaScript to get the current date in the format “YYYY-MM-DD”?
+const currentDate = new Date().toISOString().split('T')[0];
+console.log(currentDate);
+
+//Can you write a function in JavaScript to calculate the cumulative sum of an array?
+const cumulativeSum  = arr => arr.reduce((acc, num) =>
+[...acc, acc.length ? acc[acc.length -1]+num :num],[])
+console.log(cumulativeSum (arr));
+
+//Can you write a function in JavaScript to split an array into chunks of a specified size?
+
+function chunkArray(arr, size){
+    const result =[];
+    for(i=0 ; i<arr.length; i+= size){
+    result.push(arr.slice(i,i+size))
+    }
+    return result;
+    }
+    
+    let arr3 = [1, 2, 3, 4, 5, 6, 7, 8];
+    
+    let chunkedArr = chunkArray(arr3, 3);
+    console.log(chunkedArr);
+
+
+//Can you write a one-liner in JavaScript to find the longest consecutive sequence of a specific element in an array?
+const longestSequence = (arr, element) => Math.max(...arr.join('').split(new RegExp(`[^${element}]`)).map(seq => seq.length));
+
+//Can you write a function in JavaScript to transpose a 2D matrix?
+const transposeMatrix = matrix => matrix[0].map((col, i) => matrix.map(row => row[i]));
+
+// : Can you write a function in JavaScript to convert a string containing hyphens and underscores to camel case?
+const toCamelCase = str => str.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
+

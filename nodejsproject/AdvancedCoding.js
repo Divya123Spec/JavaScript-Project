@@ -72,7 +72,7 @@ const obj = {
     b,
     c: { a: nestedA },
   } = obj; 
-  console.log(a, b, nestedA);
+  console.log("example",a, b, nestedA); // 1,2,3
 
 
 
@@ -248,5 +248,3 @@ const obj2 ={
 console.log(obj2.y()())
 
 
-setTimeout(()=>console.log(1),0)
-console.log(2);

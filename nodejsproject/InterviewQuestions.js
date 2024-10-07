@@ -399,3 +399,6 @@ a[c] = 456;
 console.log(a[b]); // 456 here object key will be converted to string
 // when you use an object as key in another object, it will be converted to string, the conversion resluts in [object Object] for both objects,
 // so the second assignment will overwrite the first one
+
+
+
