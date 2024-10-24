@@ -4,3 +4,196 @@ object-fit :Contain
 all should be fit in height and width without strcth
 mix-blend-mode :color-burn
 all icons will come on same background color
+
+
+flex
+mixins
+css variables
+better code 
+
+
+mixins and variables are tools to enhance the resuablity and maintainabiltiy often used in preprocessor 
+language like sass and scss.
+
+CSS Variables (Custom Properties)
+1.Css variables are used to store the values and use these values throught our CSS.
+2.they are useful things like color schemes, spacing or any other values might need to be repeat.
+
+:root{
+    --main-color:"green";
+    --padding:"20px" 
+}
+here --main-color and --padding are variables
+.button{
+    background-color:var(--main-color);
+    padding: var(--padding);
+}
+
+CSS Mixins
+1.A mixin is block of css declration that can be reused across your application.
+2.Mixins are commonly avbalibale in preprocessor like scss, and less unlike css.
+
+@mixin button-style($color,$padding){
+    background-color :$color;
+    padding: $padding;
+    border-radius:5px;
+}
+
+button{
+    @include button-style(red,20px)
+}
+In this case, the mixin button-style stores a reusable block of CSS that can be applied to elements with @include.
+
+Variables: Store single values (e.g., colors, spacing).
+Mixins: Store multiple CSS properties or blocks of code, making it more flexible and powerful for reusability.
+
+
+Below are some of the most important features of SCSS
+1.Nesting
+SCSS allows you to nest CSS selectors in a way that mirrors the HTML structure. This reduces repetition and makes the code more readable.
+nav {
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+2.Partials and Imports
+You can break your SCSS into smaller, reusable files called partials. 
+Partials typically start with an underscore (_) to tell SCSS not to compile 
+them into standalone CSS files. You can then use @import to include these 
+partials in your main SCSS file.
+
+// _buttons.scss
+button {
+  background-color: #3498db;
+  color: white;
+}
+
+// main.scss
+@import 'buttons';
+
+
+3.Extend/Inheritance
+The @extend directive allows one selector to inherit the styles of another, promoting code reusability.
+.btn {
+  padding: 10px 20px;
+  background-color: blue;
+}
+
+.btn-primary {
+  @extend .btn;
+  background-color: green;
+}
+
+4.Functions
+SCSS includes built-in functions (like lighten(), darken(), fade()) 
+and also allows you to define your own custom functions.
+$primary-color: #3498db;
+
+button {
+  background-color: lighten($primary-color, 10%);
+}
+
+5.Loops (Control Directives)
+SCSS offers control directives like @for, @each, and @if to iterate over items or conditionally apply styles.
+$colors: red, blue, green;
+
+@each $color in $colors {
+  .#{$color}-text {
+    color: $color;
+  }
+}
+6.Operators
+SCSS allows the use of math operators like +, -, *, / to perform calculations.
+.container {
+  width: 100% - 20px;
+}
+
+div {
+  margin: 10px * 2;
+}
+
+7.Placeholder Selectors
+The % symbol is used to define placeholders, which are like classes that can't be rendered on their own, but can be extended by other selectors.
+
+8.Functions
+SCSS provides several built-in functions (like color manipulation functions) and also allows you to define custom functions for more complex operations.
+
+scss
+Copy code
+$primary-color: #3498db;
+
+.lightened {
+  background-color: lighten($primary-color, 20%);
+}
+
+9.Interpolation
+Interpolation allows you to embed variables inside strings or selectors dynamically.
+
+scss
+Copy code
+$type: 'success';
+
+.alert-#{$type} {
+  color: green;
+}
+
+
+
+// Flex
+disply: flex, flexp-wrap no wrap defualt and then wrap is along with align-content , flex- direction
+
+Flex box is one dimensional layout model 
+based on flex direction property we can adujust the flex direction row or column
+flexible and efficinet layouts
+distribute space among items
+control their alignments 
+
+loyout modes
+block for sections in awebpage
+inline for text
+table for two dimensionalpostioned for expicit postion of an element
+
+why flex box?
+a lot of flexiblity
+arrange items
+spacing
+order of items
+bootstrap 4 built on top of flex layout 
+
+<div class="container">
+<div class ="item1"></div>
+<div class ="item1"></div>
+<div class ="item1"></div>
+</div>
+from main start to main end it will flow and it will take main size 
+
+flex container property
+display - mandatory to display in flex we need to delcare the display flex(block level or inline level)
+flex- direction - it defines the items in which direction it should flow row or column(row, row-reverse,column, column-reverse)
+flex-wrap - wrapping of items within container(nowwrap is defualt, warp(wrap in conatner), wrap-reverse(reveser order of items),)
+flex-flow - shortend hand of flex display (instead od direction and warp we can use this only like row-reverse ,wrap)
+ 
+// alignment property
+justify -content - 
+align the items(flex- start(starting of the screen), flex-end(items end to start),center(center of screen),space-between(space in between items), space-around(space around each item),(space -evenly evenlly space))
+
+align -items 
+defines the how flex items layed out along aixs(align-items(stretch defualt),(flex-start),(flext-end),center(along with cross axis),baseline)
+
+align -content - 
+defines the align items with cross axis , (multiple items in container) (flex-wrap -wrap,align-items(stretch defualt),(flex-start),(flext-end),center(along with cross axis),baseline))
+
+
+Grid - two dimensional way 
+grid has container - display grid
+grid-template -rows = it displays the items in row
+grid-template-coloumn = it displays the items in column
+grid-column – Specifies which columns an item should span.
+grid-row – Specifies which rows an item should span.

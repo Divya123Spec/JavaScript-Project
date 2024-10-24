@@ -1,0 +1,8 @@
+1.how do you find the missing number in agiven array of 1 to 100?
+2.how do you find duplicate number of a given interger array.
+3.how do you fing smallest and largest number in an unsorted integer array.
+4.how do you find all pairs of an integre array whose sum is equal to a given number?
+5.how do you remove dupliactes from a given array?
+6.find the thrid largest in an unsorted array?
+7.finsd the third samllest in an unsorted array?
+fatrioal of a number?
