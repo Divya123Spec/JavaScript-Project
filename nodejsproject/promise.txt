@@ -1,0 +1,81 @@
+Promise.all, Promise.race, and Promise.any are all methods provided by the JavaScript Promise API, and they have different behaviors when working with multiple promises. Here's a breakdown of each:
+
+1. Promise.all
+Behavior:
+
+Takes an iterable of promises and returns a single promise that resolves when all of the promises in the iterable have resolved.
+If any of the promises reject, the returned promise immediately rejects with the reason of the first promise that rejected.
+The resolved value is an array containing the results of each promise, in the order they were passed in.
+Usage:
+
+javascript
+Copy code
+const promise1 = Promise.resolve(1);
+const promise2 = Promise.resolve(2);
+const promise3 = Promise.resolve(3);
+
+Promise.all([promise1, promise2, promise3])
+  .then((results) => {
+    console.log(results); // Output: [1, 2, 3]
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
+Key Point:
+
+If you need all promises to succeed and want to handle the results together, use Promise.all.
+2. Promise.race
+Behavior:
+
+Takes an iterable of promises and returns a single promise that resolves or rejects as soon as one of the promises in the iterable resolves or rejects.
+The resolved value or rejection reason is from the promise that settled first.
+Usage:
+
+javascript
+Copy code
+const promise1 = new Promise((resolve) => setTimeout(resolve, 100, 'First'));
+const promise2 = new Promise((resolve) => setTimeout(resolve, 200, 'Second'));
+const promise3 = new Promise((resolve, reject) => setTimeout(reject, 150, 'Error'));
+
+Promise.race([promise1, promise2, promise3])
+  .then((result) => {
+    console.log(result); // Output: 'First' (if promise1 settles first)
+  })
+  .catch((error) => {
+    console.error("Error:", error); // Output: 'Error' (if promise3 rejects first)
+  });
+Key Point:
+
+If you want to take action based on the first promise to settle (either resolve or reject), use Promise.race.
+3. Promise.any
+Behavior:
+
+Takes an iterable of promises and returns a single promise that resolves when any of the promises in the iterable resolve.
+If all of the given promises reject, it rejects with an AggregateError, which is a special error object that groups together all the rejection reasons.
+Usage:
+
+javascript
+Copy code
+const promise1 = Promise.reject('First Error');
+const promise2 = Promise.reject('Second Error');
+const promise3 = Promise.resolve('Third Success');
+
+Promise.any([promise1, promise2, promise3])
+  .then((result) => {
+    console.log(result); // Output: 'Third Success'
+  })
+  .catch((error) => {
+    console.error("Error:", error); // Will not run in this example
+  });
+Key Point:
+
+Use Promise.any when you want the first promise that resolves successfully, but you want to handle all rejections together if none of the promises resolve.
+Summary of Differences
+Method	Resolves When	Rejects When	Return Value
+Promise.all	All promises resolve	Any promise rejects	Array of results
+Promise.race	Any promise resolves or rejects	First promise to settle (resolve/reject)	Value of the first settled promise
+Promise.any	Any promise resolves	All promises reject	Value of the first resolved promise or AggregateError
+Use Cases
+Promise.all: Use when you need all promises to succeed and process results together.
+Promise.race: Use when you want the result of the first promise that settles.
+Promise.any: Use when you want the result of the first promise that resolves successfully, ignoring rejections until all promises are rejected.

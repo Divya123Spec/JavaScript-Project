@@ -317,3 +317,9 @@ checkUserLoggedIn()
 
 // Promises use .catch() for error handling.
 // async/await uses traditional try and catch blocks for error handling.
+
+
+
+
+
+
