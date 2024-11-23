@@ -1,0 +1,56 @@
+What is a Prototype?
+Every JavaScript object has an internal link to another object called its prototype. When you try to access a property or method on an object and it is not found on that object, JavaScript looks for it in the object's prototype chain.
+
+Prototype of an Object: When you create an object, either by using a constructor function or by using an object literal, that object has a reference to its prototype.
+
+Prototype Chain: If the property or method is not found on the object, JavaScript continues searching in the prototype of that object, then the prototype of the prototype, and so on, until it reaches Object.prototype, the end of the chain.
+
+How Prototype Works
+Object Creation:
+
+When you create an object using a constructor function, JavaScript automatically adds a prototype property to that function. This prototype property is an object itself and will be shared among all instances created by the constructor.
+Prototype Chain Lookup:
+
+When you try to access a property or method on an object, JavaScript first looks for it on the object itself.
+If it doesn’t find it, it looks for the property in the prototype of that object.
+This continues up the prototype chain until it either finds the property or reaches the top (which is null).
+Adding Methods to a Prototype: You can add methods to a constructor’s prototype property, and all instances of that constructor will have access to those methods.
+
+javascript
+Copy code
+function Person(name) {
+  this.name = name;
+}
+
+// Adding a method to the prototype
+Person.prototype.sayHello = function() {
+  console.log('Hello, my name is ' + this.name);
+};
+
+const person1 = new Person('Alice');
+const person2 = new Person('Bob');
+
+person1.sayHello(); // "Hello, my name is Alice"
+person2.sayHello(); // "Hello, my name is Bob"
+Object's __proto__: Each object has an internal property called __proto__ which refers to the object's prototype. This is how JavaScript links objects to their prototypes. However, __proto__ is not recommended for direct use in modern code, and instead, you should rely on Object.getPrototypeOf().
+
+Example: Prototype Chain
+javascript
+Copy code
+const animal = {
+  eats: true
+};
+
+const rabbit = {
+  jumps: true
+};
+
+rabbit.__proto__ = animal; // rabbit's prototype is animal
+
+console.log(rabbit.jumps); // true (found on rabbit)
+console.log(rabbit.eats);  // true (found on animal, via prototype chain)
+Key Points:
+Inheritance: Prototypes enable inheritance. You can create objects that inherit properties and methods from other objects.
+Prototype Chain: JavaScript looks up properties through the prototype chain until it either finds the property or reaches the end (null).
+Shared Methods: Methods added to the prototype of a constructor function are shared by all instances, saving memory.
+By using prototypes, JavaScript objects can share behavior efficiently through inheritance without duplicating code.

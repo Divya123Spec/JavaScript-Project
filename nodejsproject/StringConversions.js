@@ -7,7 +7,7 @@ console.log("5" - 3);
 
 console.log(5 == "5"); // true
 console.log(5 === "5"); // false
-console.log(ytpeof, NaN); // number
+console.log(typeof NaN); // number
 
 let x = "12"; // string
 console.log(Number(x)); // 12

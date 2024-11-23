@@ -248,3 +248,23 @@ const obj2 ={
 console.log(obj2.y()())
 
 
+Array.prototype.sum = function (){
+  return this.reduce((acc,curr) =>acc+curr,0)
+  }
+  
+  const numberss =[1,2,3,4]
+  console.log(numberss.sum());
+
+
+  String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+};
+
+const word = "javascript";
+console.log(word.capitalize()); 
+
+
+const obj11 = { a: 1 };
+const obj12 = Object.assign({}, obj11, { b: 2 });
+console.log(obj11)
+
