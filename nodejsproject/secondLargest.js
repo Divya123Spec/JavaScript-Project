@@ -1,3 +1,4 @@
+// Method 1: Using Set & Sort
 let arr = [1, 2, 3, 4, 5, 8, 7, 8];
 
 // Remove duplicates and sort the array in descending order
@@ -7,7 +8,7 @@ let secondLargests = uniqueArr[1]; // The second element in the sorted array
 console.log(secondLargests);
 
 
-
+// Method 2: Optimized Approach (Single Pass)
 let largest = -Infinity;
 let secondLargest = -Infinity;
 
@@ -24,3 +25,14 @@ for (let i = 0; i < arr.length; i++) {
 
 console.log(secondLargest); // Output: 7
 
+
+
+// Method 3: Most Optimized (Reduce Approach)
+
+let [large, secondLarge] = arr.reduce(
+  ([max, second], num) => 
+    num > max ? [num, max] : num > second && num < max ? [max, num] : [max, second], 
+  [-Infinity, -Infinity]
+);
+
+console.log(secondLarge); // Output: 7

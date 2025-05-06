@@ -1,22 +1,27 @@
-/* Input: digits = [1,2,3]
-Output: [1,2,4] */
+// Method 1: Iterative Approach (O(n))
 
-let digits =[9,9]
+function incrementDigit(digits) {
+    for (let i = digits.length - 1; i >= 0; i--) {
+      if (digits[i] < 9) {
+        digits[i]++;
+        return digits;
+      }
+      digits[i] = 0;
+    }
+    digits.unshift(1);
+    return digits;
+  }
+  
+  console.log(incrementDigit([9, 9])); // 👉 [1, 0, 0]
 
-function incrementDigit(digits){
-for(let i = digits.length-1; 1>=0; i--){
-if(digits[i] <9){
-digits[i]++;
-return digits;
-}else{
-digits[i] =0;
-}
-}
-digits.unshift(1);
-return digits;
-
-}
-
-const result = incrementDigit(digits);
-console.log(result);
-
+  
+//   Method 2: Using BigInt (One-Liner)
+  function incrementDigitBigInt(digits) {
+    return (BigInt(digits.join("")) + 1n)
+      .toString()
+      .split("")
+      .map(Number);
+  }
+  
+  console.log(incrementDigitBigInt([9, 9])); // 👉 [1, 0, 0]
+  

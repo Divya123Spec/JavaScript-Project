@@ -1,5 +1,41 @@
 function flattenArray(arr) {
   let result = [];
+  for (let ele of arr) {
+    if (Array.isArray(ele)) {
+      result.push(...flattenArray(ele)); // Recursively flatten nested arrays
+    } else {
+      result.push(ele);
+    }
+  }
+  return result;
+}
+
+let array = [10, 20, 46, [26, 47, [94, 37]], 27, [14, 93]];
+console.log(flattenArray(array)); 
+// Output: [10, 20, 46, 26, 47, 94, 37, 27, 14, 93]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function flattenArray(arr) {
+  let result = [];
 
   arr.forEach((item) => {
     if (Array.isArray(item)) {
@@ -12,7 +48,7 @@ function flattenArray(arr) {
   return result;
 }
 
-let array = [10, 20, 46, [26, 47, [94, 37]], 27, [14, 93]];
+let array2 = [10, 20, 46, [26, 47, [94, 37]], 27, [14, 93]];
 let flattenedArray = flattenArray(array);
 
 console.log(flattenedArray);
